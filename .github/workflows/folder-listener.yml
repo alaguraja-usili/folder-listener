@@ -61,7 +61,11 @@ jobs:
             <b>List of files changed in : ${{ env.LISTENING_FOLDER }}</b>
             <hr>
             <br>
-           
+
+            <br>
+            <b> List of files changed count : </b>  ${{ steps.changed-files-specific.outputs.all_changed_files_count }}
+            <br>
+            
             ${{ steps.changed-files-specific.outputs.all_changed_files }}
            
             <br>
@@ -70,10 +74,6 @@ jobs:
             <hr>
             <br>
             ${{ github.event.head_commit.message }}
-
-
-
-            ${{ steps.changed-files-specific.outputs.other_modified_files }}
 
 
           #body: echo $changedfiles
