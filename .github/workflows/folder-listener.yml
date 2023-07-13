@@ -55,7 +55,7 @@ jobs:
           # Required recipients' addresses:
           to: alagu.rar@gmail.com
           # Required sender full name (address can be skipped):
-          from: ALV GitHub Guardrails
+          from: ALVDIGITAL Systems (API)
           # Optional plain body:
           html_body: |
             <b>List of files changed in ${{ env.LISTENING_FOLDER }}</b>
