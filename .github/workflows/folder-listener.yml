@@ -14,7 +14,7 @@ jobs:
         id: changed-files-specific
         uses: tj-actions/changed-files@v37
         with:
-            separator: " "
+            separator: "\n"
             files: ${{ env. LISTENING_FOLDER }}
  
       # NOTE: `since_last_remote_commit: true` is implied by default and falls back to the previous local commit.
@@ -57,7 +57,7 @@ jobs:
           # Required sender full name (address can be skipped):
           from: ALVDIGITAL Systems (API)
           # Optional plain body:
-          html_body: |
+          body: |
             <b>List of files changed in : ${{ env.LISTENING_FOLDER }}</b>
             <hr>
             <br>
