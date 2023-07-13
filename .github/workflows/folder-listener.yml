@@ -58,15 +58,15 @@ jobs:
           from: ALVDIGITAL Systems (API)
           # Optional plain body:
           html_body: |
-            <b>List of files changed in ${{ env.LISTENING_FOLDER }}</b>
+            <b>List of files changed in : ${{ env.LISTENING_FOLDER }}</b>
             <hr>
             <br>
             ${{ steps.changed-files-specific.outputs.all_changed_files }}
-            <br>
+            <br />
 
             <b>Commit Comment</b>
             <hr>
-            <br>
+            <br />
             ${{ github.event.head_commit.message }}
 
           #body: echo $changedfiles
