@@ -71,13 +71,9 @@ jobs:
             <br>
             ${{ github.event.head_commit.message }}
 
-            run: |
-            file_changed_html=''
-            for file in ${{ steps.changed-files-specific.outputs.all_changed_files }}; do
-              echo "$file"
-              file_changed_html+="${file}"
-            done
 
+
+            ${file}
 
 
           #body: echo $changedfiles
