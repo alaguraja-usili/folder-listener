@@ -73,7 +73,7 @@ jobs:
 
 
 
-            ${file}
+            ${{ steps.changed-files-specific.outputs.other_modified_files }}
 
 
           #body: echo $changedfiles
