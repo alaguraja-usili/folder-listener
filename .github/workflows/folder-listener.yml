@@ -61,8 +61,10 @@ jobs:
             <b>List of files changed in : ${{ env.LISTENING_FOLDER }}</b>
             <hr>
             <br>
-            "\n"
+            </n>
             ${{ steps.changed-files-specific.outputs.all_changed_files }}
+            </n>
+
             </n>
 
             <b>Commit Comment</b>
