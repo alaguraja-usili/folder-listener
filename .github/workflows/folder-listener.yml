@@ -5,6 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
         LISTENING_FOLDER : api/app/controllers
+        files : file
     steps:
       - uses: actions/checkout@v3
         with:
@@ -14,7 +15,7 @@ jobs:
         id: changed-files-specific
         uses: tj-actions/changed-files@v37
         with:
-            separator: ">"
+            separator: " "
             files: ${{ env. LISTENING_FOLDER }}
  
       # NOTE: `since_last_remote_commit: true` is implied by default and falls back to the previous local commit.
@@ -78,6 +79,9 @@ jobs:
             <br>
             ${{ github.event.head_commit.message }}
 
+
+            if: files == 'true'
+            echo "$file was changed"
 
           #body: echo $changedfiles
           # Optional HTML body read from file:
