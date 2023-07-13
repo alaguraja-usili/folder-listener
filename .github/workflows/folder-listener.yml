@@ -68,8 +68,7 @@ jobs:
             <hr>
             <b> List of files changed count : </b>  ${{ steps.changed-files-specific.outputs.all_changed_files_count }}
             <hr>
-            <br>
-
+            
             ${{ steps.changed-files-specific.outputs.all_changed_files }}
            
             <br>
@@ -80,8 +79,8 @@ jobs:
             ${{ github.event.head_commit.message }}
 
 
-            if: files == 'true'
-            echo "$file was changed"
+            ${{ env.files }}
+
 
           #body: echo $changedfiles
           # Optional HTML body read from file:
