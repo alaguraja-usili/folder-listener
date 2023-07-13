@@ -14,7 +14,7 @@ jobs:
         id: changed-files-specific
         uses: tj-actions/changed-files@v37
         with:
-            separator: "br"
+            separator: "/n"
             files: ${{ env. LISTENING_FOLDER }}
  
       # NOTE: `since_last_remote_commit: true` is implied by default and falls back to the previous local commit.
@@ -65,9 +65,10 @@ jobs:
             ${{ steps.changed-files-specific.outputs.all_changed_files }}
            
             <br>
+            <br>
             <b>Commit Comment</b>
             <hr>
-            <br />
+            <br>
             ${{ github.event.head_commit.message }}
 
           #body: echo $changedfiles
